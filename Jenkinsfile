@@ -2,7 +2,7 @@ properties([pipelineTriggers([githubPush()])])
 
 node('linux') {
         stage('Unit Test') {
-		git 'https://github.com/jamesdan0503/java-project.git'
+		git 'https://github.com/bingsun515/java-project.git'
 		sh 'ant -f test.xml -v'
 		junit 'reports/result.xml'
         }
